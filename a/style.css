@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
+
+body {
+  background-color: rgb(25, 25, 25);
+
+}
+
+#logo,#Net{
+  position: fixed;
+}
+
+#logo{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  top: 100%;
+  transition: 2s;
+  opacity: 0;
+}
+
+#logo.active{
+  transform: translateY(-150%);
+  opacity: 1;
+}
+
+
+
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: #1D1F20;
+}
+#box {
+  display: flex;
+  align-items: center;
+  width: 600px;
+  height: 300px;
+  color: rgb(0, 255, 255);
+  text-align: left;
+  font-family: 'Raleway';
+  font-size: 1.5rem;
+}
+.gradient-border {
+  --borderWidth: 3px;
+  background: #1d1f20;
+  position: relative;
+  border-radius: var(--borderWidth);
+}
+.gradient-border:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #4400ff, #2600ff, #0004ff, #00a2ff, #00d9ff, #00ffdd, #00ffdd, rgb(0, 247, 152));
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+#menu{
+  position: fixed;
+  transform: translateY(220%);
+  transition: 2s;
+  opacity: 0;
+}
+
+#menu.active{
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+#imageinme{
+  position: fixed;
+  left:350px;
+}
+#textab{
+  position:fixed;
+  left: 30px;
+}
+#icons{
+  position:fixed;
+  bottom: 10px;
+  left: 30px;
+}
+
+#icons2{
+  position:fixed;
+  bottom: 4px;
+  left: 120px;
+}
+
+#icons3{
+  position:fixed;
+  bottom: 10px;
+  left: 230px;
+}
