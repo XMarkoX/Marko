@@ -12,11 +12,21 @@ body {
 #logo{
   display: flex;
   justify-content: center;
+  align-content: center;
   width: 100%;
   top: 100%;
   transition: 2s;
   opacity: 0;
+  transform: translateY(0%);
+  text-align: center;
+  color: aqua;
+  font-family: 'Raleway';
+  font-size: 3rem;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
 }
+
 
 #logo.active{
   transform: translateY(-150%);
@@ -114,4 +124,18 @@ body {
   position:fixed;
   bottom: 10px;
   left: 230px;
+}
+
+#continue{
+  position:fixed;
+  bottom: 10px;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px rgb(75, 89, 223), 0 0 20px rgb(98, 0, 255), 0 0 30px #00e6d3, 0 0 40px #2a00e6, 0 0 50px #00b8e6, 0 0 60px #00e68e, 0 0 70px #00cbe6;
+  }
+  to {
+    text-shadow: 0 0 20px rgb(0, 238, 255), 0 0 30px #4ddbff, 0 0 40px #4df9ff, 0 0 50px #4d50ff, 0 0 60px #4dafff, 0 0 70px #4dfff6, 0 0 80px #4dffc4;
+  }
 }
